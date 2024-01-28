@@ -1,0 +1,19 @@
+.navbar {
+  height: 50px;
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-left {
+  margin-left: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-right {
+  margin-right: 30px;
+  cursor: pointer;
+}

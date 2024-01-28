@@ -1,0 +1,31 @@
+export const signUp = async (email, password) => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = userCredential.user;
+    console.log("User signed up:", user);
+    return user;
+  } catch (error) {
+    console.error("Sign up error:", error);
+    throw error;
+  }
+};
+
+export const signIn = async (email, password) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = userCredential.user;
+    console.log("User signed in:", user);
+    return user;
+  } catch (error) {
+    console.error("Sign in error:", error);
+    throw error;
+  }
+};
